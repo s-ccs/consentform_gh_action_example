@@ -16,7 +16,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: _callerproject.toml
-          path: ${{ github.workspace }}/project_*.toml
+          path: ${{ github.workspace }}/*.toml
       - name: Generate Forms
         uses: s-ccs/consentform_gh_action@main
         with:
