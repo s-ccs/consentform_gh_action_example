@@ -16,7 +16,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: _callerproject.toml
-          path: project_example.toml
+          path: ${{ github.workspace }}/../project_example.toml
           if-no-files-found: error
       - name: Generate Forms
         uses: s-ccs/consentform_gh_action@main
