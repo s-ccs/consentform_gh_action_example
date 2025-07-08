@@ -4,13 +4,8 @@ on:
     - project*.toml
     - .github/workflows/forms.yml
 jobs:
-  build-deploy:
+  upload-artefact:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        language: 
-          - de
-          - en
     steps:
       - name: checkout repo
         uses: actions/checkout@v4
@@ -21,6 +16,14 @@ jobs:
           path: project_*.toml
           overwrite: true
           if-no-files-found: error
+  build-deploy:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        language: 
+          - de
+          - en
+    steps:
       - name: Generate Forms
         uses: s-ccs/consentform_gh_action@main
         with:
