@@ -19,6 +19,7 @@ jobs:
         with:
           name: _callerproject.toml
           path: project_*.toml
+          overwrite: true
           if-no-files-found: error
       - name: Generate Forms
         uses: s-ccs/consentform_gh_action@main
