@@ -1,6 +1,6 @@
 [Consentform]
     pay_per_hour = 0
-	  study_duration_hrs = 1
+	study_duration_hrs = 1
 
     use_eeg = false
     use_eyetracking = true
